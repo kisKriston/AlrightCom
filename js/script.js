@@ -1,49 +1,3 @@
-/*
-document.querySelector('.aboutus-image img').addEventListener('mouseover', function() {
-    document.querySelector('.aboutus-image img').src = "images/aboutus_color.jpg";
-});
-document.querySelector('.aboutus-image').addEventListener('mouseout', function() {
-    document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-});
-
-document.querySelector('.news-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.news-image img').src = "images/news_color.jpg";
-});
-document.querySelector('.news-image').addEventListener('mouseout', function() {
-    document.querySelector('.news-image img').src = "images/news_grey.jpg";
-});
-
-document.querySelector('.services-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.services-image img').src = "images/services_color.jpg";
-});
-document.querySelector('.services-image').addEventListener('mouseout', function() {
-    document.querySelector('.services-image img').src = "images/services_grey.jpg";
-});
-
-document.querySelector('.customers-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.customers-image img').src = "images/customers_color.jpg";
-});
-document.querySelector('.customers-image').addEventListener('mouseout', function() {
-    document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-});
-
-document.querySelector('.blog-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.blog-image img').src = "images/blog_color.jpg";
-});
-document.querySelector('.blog-image').addEventListener('mouseout', function() {
-    document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-});
-
-document.querySelector('.contact-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.contact-image img').src = "images/contact_color.jpg";
-});
-document.querySelector('.contact-image').addEventListener('mouseout', function() {
-    document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
-});
-*/
-
-
-
 // On click About Us
 
 document.querySelector('.aboutus-image').addEventListener('click', function() {
@@ -200,6 +154,49 @@ document.querySelector('.contact-image').addEventListener('click', function() {
 
 
 
+/*
+document.querySelector('.aboutus-image img').addEventListener('mouseover', function() {
+    document.querySelector('.aboutus-image img').src = "images/aboutus_color.jpg";
+});
+document.querySelector('.aboutus-image').addEventListener('mouseout', function() {
+    document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
+});
+
+document.querySelector('.news-image img').addEventListener('mouseenter', function() {
+    document.querySelector('.news-image img').src = "images/news_color.jpg";
+});
+document.querySelector('.news-image').addEventListener('mouseout', function() {
+    document.querySelector('.news-image img').src = "images/news_grey.jpg";
+});
+
+document.querySelector('.services-image img').addEventListener('mouseenter', function() {
+    document.querySelector('.services-image img').src = "images/services_color.jpg";
+});
+document.querySelector('.services-image').addEventListener('mouseout', function() {
+    document.querySelector('.services-image img').src = "images/services_grey.jpg";
+});
+
+document.querySelector('.customers-image img').addEventListener('mouseenter', function() {
+    document.querySelector('.customers-image img').src = "images/customers_color.jpg";
+});
+document.querySelector('.customers-image').addEventListener('mouseout', function() {
+    document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
+});
+
+document.querySelector('.blog-image img').addEventListener('mouseenter', function() {
+    document.querySelector('.blog-image img').src = "images/blog_color.jpg";
+});
+document.querySelector('.blog-image').addEventListener('mouseout', function() {
+    document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
+});
+
+document.querySelector('.contact-image img').addEventListener('mouseenter', function() {
+    document.querySelector('.contact-image img').src = "images/contact_color.jpg";
+});
+document.querySelector('.contact-image').addEventListener('mouseout', function() {
+    document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+});
+*/
 
 
 
