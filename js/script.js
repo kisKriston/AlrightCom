@@ -32,7 +32,7 @@ document.querySelector('.news-image').addEventListener('click', function() {
         
         document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 5fr 20fr 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
         document.querySelector('.aboutus-image img').src = "images/aboutus_small.jpg";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
+        document.querySelector('.news-image img').src = "images/news_color.jpg";
         document.querySelector('.services-image img').src = "images/services_small.jpg";
         document.querySelector('.customers-image img').src = "images/customers_small.jpg";
         document.querySelector('.blog-image img').src = "images/blog_small.jpg";
