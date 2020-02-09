@@ -1,0 +1,123 @@
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+q:before,q:after {
+	content:'';
+}
+
+/* Basic styles */
+
+html, body, main {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: #fff;
+    font-family: 'Montserrat';
+    margin: 10px 50px;
+}
+
+
+/* HEADER section styles */
+
+
+
+
+
+/* MAIN section styles */
+
+#grid-wrapper {
+    display: grid;
+    max-width: 1920px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px;
+    grid-auto-rows: minmax(200px, 100%);
+    grid-gap: 0px;
+    max-height: 100%;
+}
+
+.grid-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.grid-image img {
+    max-width: 100%;
+    transition: .5s linear;
+}
+
+.grid-image img:hover {
+    opacity: 0;    
+    cursor: pointer;
+}
+
+#aboutus {background-image: url("../images/aboutus_color.jpg");}
+
+#news {background-image: url("../images/news_color.jpg");}
+
+#services {background-image: url("../images/services_color.jpg");}
+
+#customers {background-image: url("../images/customers_color.jpg");}
+
+#blog {background-image: url("../images/blog_color.jpg");}
+
+#contact {background-image: url("../images/contact_color.jpg");}
+
+.grid-content {
+    background-image: url("../images/content_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
