@@ -1,224 +1,649 @@
-// On click About Us
+// Mouse hover menu color change
 
-document.querySelector('.aboutus-image').addEventListener('click', function() {
+$("#aboutus").mouseenter(function() {
+    $("#aboutus-grey").animate({
+        opacity: 0
+    }, 200 );
+});
+$("#aboutus").mouseleave(function() {
+    $("#aboutus-grey").animate({
+        opacity: 1
+    }, 200 );
+});
+
+$("#news").mouseenter(function() {
+    $("#news-grey").animate({
+        opacity: 0
+    }, 200 );
+});
+$("#news").mouseleave(function() {
+    $("#news-grey").animate({
+        opacity: 1
+    }, 200 );
+});
+
+$("#services").mouseenter(function() {
+    $("#services-grey").animate({
+        opacity: 0
+    }, 200 );
+});
+$("#services").mouseleave(function() {
+    $("#services-grey").animate({
+        opacity: 1
+    }, 200 );
+});
+
+$("#customers").mouseenter(function() {
+    $("#customers-grey").animate({
+        opacity: 0
+    }, 200 );
+});
+$("#customers").mouseleave(function() {
+    $("#customers-grey").animate({
+        opacity: 1
+    }, 200 );
+});
+
+$("#blog").mouseenter(function() {
+    $("#blog-grey").animate({
+        opacity: 0
+    }, 200 );
+});
+$("#blog").mouseleave(function() {
+    $("#blog-grey").animate({
+        opacity: 1
+    }, 200 );
+});
+
+$("#contact").mouseenter(function() {
+    $("#contact-grey").animate({
+        opacity: 0
+    }, 200 );
+});
+$("#contact").mouseleave(function() {
+    $("#contact-grey").animate({
+        opacity: 1
+    }, 200 );
+});
+
+
+var x = $(document).width();
+var y = $(window).height();
+var z = $("main").height();
+
+$("div.images img").css("maxHeight", y);
+$("div.images img").css("height", z);
+
+
+/*****************************************/
+/***** About us menu click functions *****/
+
+$("#aboutus-image").click(function() {
+    if ($("#aboutus-content").css("display") === "none") {        
+        $("#aboutus").animate({width: x*5/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_color.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+        $("#aboutus-image").animate({top: '20px'}, 300, function(){
+			$("#aboutus-image").animate({top: '0px'}, 300);
+        });
+        $("#aboutus-content").css("display", "flex");
+        $("#aboutus-content").animate({width: x*4/6}, 300);
+		$("#aboutus-image").css("width", x/6);        
         
-    if (document.querySelector('#grid-wrapper').style.gridTemplateColumns !== "5fr 20fr 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px") {
-        
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "5fr 20fr 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_color.jpg";
-        document.querySelector('.news-image img').src = "images/news_small.jpg";
-        document.querySelector('.services-image img').src = "images/services_small.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_small.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_small.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_small.jpg";
+		$(".outer-div").css("width", "auto");		
+		
+		$("#news-content").animate({width: "0px"}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+		$("#services-content").animate({width: "0px"}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+		$("#customers-content").animate({width: "0px"}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+		$("#blog-content").animate({width: "0px"}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+		$("#contact-content").animate({width: "0px"}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+		
+		$("#news-image").animate({width: x/30}, 300);
+        $("#news-grey").attr("src", "images/news_grey_small.jpg");
+		$("#news-color").attr("src", "images/news_color_small.jpg");
+		$("#services-image").animate({width: x/30}, 300);
+        $("#services-grey").attr("src", "images/services_grey_small.jpg");
+		$("#services-color").attr("src", "images/services_color_small.jpg");
+		$("#customers-image").animate({width: x/30}, 300);
+        $("#customers-grey").attr("src", "images/customers_grey_small.jpg");
+		$("#customers-color").attr("src", "images/customers_color_small.jpg");
+		$("#blog-image").animate({width: x/30}, 300);
+        $("#blog-grey").attr("src", "images/blog_grey_small.jpg");
+		$("#blog-color").attr("src", "images/blog_color_small.jpg");
+		$("#contact-image").animate({width: x/30}, 300);
+        $("#contact-grey").attr("src", "images/contact_grey_small.jpg");
+		$("#contact-color").attr("src", "images/contact_color_small.jpg");
+		
+        $("#header-line").attr("src", "images/header_with_x.png");
     } else {
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
-        document.querySelector('.services-image img').src = "images/services_grey.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+        $("#aboutus").animate({width: x/6}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+        $("#aboutus-image").animate({top: '20px'}, 300, function(){
+			$("#aboutus-image").animate({top: '0px'}, 300);
+        });
+		$("#aboutus-content").animate({width: "0px"}, 300);
+        $("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+        $(".outer-div").animate({width: x/6}, 300);
+		
+		$("#news-image").animate({width: x/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_grey.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+		$("#services-image").animate({width: x/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_grey.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+		$("#customers-image").animate({width: x/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_grey.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+		$("#blog-image").animate({width: x/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_grey.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+		$("#contact-image").animate({width: x/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_grey.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
     }
 });
 
 
+/*************************************/
+/***** News menu click functions *****/
 
-// On click News
+$("#news-image").click(function() {
+    if ($("#news-content").css("display") === "none") {        
+        $("#news").animate({width: x*5/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_color.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+        $("#news-image").animate({top: '20px'}, 300, function(){
+			$("#news-image").animate({top: '0px'}, 300);
+        });
+		$("#news-content").css("display", "flex");
+		$("#news-content").animate({width: x*4/6}, 300);
+		$("#news-image").css("width", x/6);
+		$(".outer-div").css("width", "auto");
+		
+		$("#aboutus-content").animate({width: "0px"}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+		$("#services-content").animate({width: "0px"}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+		$("#customers-content").animate({width: "0px"}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+		$("#blog-content").animate({width: "0px"}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+		$("#contact-content").animate({width: "0px"}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+		
+		$("#aboutus-image").animate({width: x/30}, 300);
+        $("#aboutus-grey").attr("src", "images/aboutus_grey_small.jpg");
+		$("#aboutus-color").attr("src", "images/aboutus_color_small.jpg");
+		$("#services-image").animate({width: x/30}, 300);
+        $("#services-grey").attr("src", "images/services_grey_small.jpg");
+		$("#services-color").attr("src", "images/services_color_small.jpg");
+		$("#customers-image").animate({width: x/30}, 300);
+        $("#customers-grey").attr("src", "images/customers_grey_small.jpg");
+		$("#customers-color").attr("src", "images/customers_color_small.jpg");
+		$("#blog-image").animate({width: x/30}, 300);
+        $("#blog-grey").attr("src", "images/blog_grey_small.jpg");
+		$("#blog-color").attr("src", "images/blog_color_small.jpg");
+		$("#contact-image").animate({width: x/30}, 300);
+        $("#contact-grey").attr("src", "images/contact_grey_small.jpg");
+		$("#contact-color").attr("src", "images/contact_color_small.jpg");
 
-document.querySelector('.news-image').addEventListener('click', function() {
-        
-    if (document.querySelector('#grid-wrapper').style.gridTemplateColumns !== "1fr 0px 5fr 20fr 1fr 0px 1fr 0px 1fr 0px 1fr 0px") {
-        
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 5fr 20fr 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_small.jpg";
-        document.querySelector('.news-image img').src = "images/news_color.jpg";
-        document.querySelector('.services-image img').src = "images/services_small.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_small.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_small.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_small.jpg";
+        $("#header-line").attr("src", "images/header_with_x.png");
     } else {
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-        document.querySelector('.services-image img').src = "images/services_grey.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+        $("#news").animate({width: x/6}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+        $("#news-image").animate({top: '20px'}, 300, function(){
+			$("#news-image").animate({top: '0px'}, 300);
+        });
+		$("#news-content").animate({width: "0px"}, 300);
+        $("#news-grey").attr("src", "images/news_grey.jpg");
+		$(".outer-div").animate({width: x/6}, 300);
+		
+		$("#aboutus-image").animate({width: x/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+		$("#services-image").animate({width: x/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_grey.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+		$("#customers-image").animate({width: x/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_grey.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+		$("#blog-image").animate({width: x/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_grey.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+		$("#contact-image").animate({width: x/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_grey.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
     }
 });
 
 
+/*****************************************/
+/***** Services menu click functions *****/
 
-// On click Services
-
-document.querySelector('.services-image').addEventListener('click', function() {
-        
-    if (document.querySelector('#grid-wrapper').style.gridTemplateColumns !== "1fr 0px 1fr 0px 5fr 20fr 1fr 0px 1fr 0px 1fr 0px") {
-        
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 5fr 20fr 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.services-image img').src = "images/services_color.jpg";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_small.jpg";
-        document.querySelector('.news-image img').src = "images/news_small.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_small.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_small.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_small.jpg";
+$("#services-image").click(function() {
+    if ($("#services-content").css("display") === "none") {        
+        $("#services").animate({width: x*5/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_color.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+        $("#services-image").animate({top: '20px'}, 300, function(){
+			$("#services-image").animate({top: '0px'}, 300);
+        });
+        $("#services-content").css("display", "flex");
+        $("#services-content").animate({width: x*4/6}, 300);
+		$("#services-image").css("width", x/6);
+		$(".outer-div").css("width", "auto");		
+		
+		$("#aboutus-content").animate({width: "0px"}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+		$("#news-content").animate({width: "0px"}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+		$("#customers-content").animate({width: "0px"}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+		$("#blog-content").animate({width: "0px"}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+		$("#contact-content").animate({width: "0px"}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+		
+		$("#aboutus-image").animate({width: x/30}, 300);
+        $("#aboutus-grey").attr("src", "images/aboutus_grey_small.jpg");
+		$("#aboutus-color").attr("src", "images/aboutus_color_small.jpg");
+		$("#news-image").animate({width: x/30}, 300);
+        $("#news-grey").attr("src", "images/news_grey_small.jpg");
+		$("#news-color").attr("src", "images/news_color_small.jpg");
+		$("#customers-image").animate({width: x/30}, 300);
+        $("#customers-grey").attr("src", "images/customers_grey_small.jpg");
+		$("#customers-color").attr("src", "images/customers_color_small.jpg");
+		$("#blog-image").animate({width: x/30}, 300);
+        $("#blog-grey").attr("src", "images/blog_grey_small.jpg");
+		$("#blog-color").attr("src", "images/blog_color_small.jpg");
+		$("#contact-image").animate({width: x/30}, 300);
+        $("#contact-grey").attr("src", "images/contact_grey_small.jpg");
+		$("#contact-color").attr("src", "images/contact_color_small.jpg");
+		
+        $("#header-line").attr("src", "images/header_with_x.png");
     } else {
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
-        document.querySelector('.services-image img').src = "images/services_grey.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+        $("#services").animate({width: x/6}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+        $("#services-image").animate({top: '20px'}, 300, function(){
+			$("#services-image").animate({top: '0px'}, 300);
+        });
+		$("#services-content").animate({width: "0px"}, 300);
+        $("#services-grey").attr("src", "images/services_grey.jpg");
+		$(".outer-div").animate({width: x/6}, 300);
+		
+		$("#aboutus-image").animate({width: x/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+		$("#news-image").animate({width: x/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_grey.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+		$("#customers-image").animate({width: x/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_grey.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+		$("#blog-image").animate({width: x/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_grey.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+		$("#contact-image").animate({width: x/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_grey.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
     }
 });
 
 
+/******************************************/
+/***** Customers menu click functions *****/
 
-// On click Customers
-
-document.querySelector('.customers-image').addEventListener('click', function() {
-        
-    if (document.querySelector('#grid-wrapper').style.gridTemplateColumns !== "1fr 0px 1fr 0px 1fr 0px 5fr 20fr 1fr 0px 1fr 0px") {
-        
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 5fr 20fr 1fr 0px 1fr 0px";
-        document.querySelector('.customers-image img').src = "images/customers_color.jpg";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_small.jpg";
-        document.querySelector('.news-image img').src = "images/news_small.jpg";
-        document.querySelector('.services-image img').src = "images/services_small.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_small.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_small.jpg";
+$("#customers-image").click(function() {
+    if ($("#customers-content").css("display") === "none") {        
+        $("#customers").animate({width: x*5/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_color.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+        $("#customers-image").animate({top: '20px'}, 300, function(){
+			$("#customers-image").animate({top: '0px'}, 300);
+        });
+        $("#customers-content").css("display", "flex");
+        $("#customers-content").animate({width: x*4/6}, 300);
+		$("#customers-image").css("width", x/6);
+		$(".outer-div").css("width", "auto");		
+		
+		$("#aboutus-content").animate({width: "0px"}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+		$("#news-content").animate({width: "0px"}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+		$("#services-content").animate({width: "0px"}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+		$("#blog-content").animate({width: "0px"}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+		$("#contact-content").animate({width: "0px"}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+		
+		$("#aboutus-image").animate({width: x/30}, 300);
+        $("#aboutus-grey").attr("src", "images/aboutus_grey_small.jpg");
+		$("#aboutus-color").attr("src", "images/aboutus_color_small.jpg");
+		$("#news-image").animate({width: x/30}, 300);
+        $("#news-grey").attr("src", "images/news_grey_small.jpg");
+		$("#news-color").attr("src", "images/news_color_small.jpg");
+		$("#services-image").animate({width: x/30}, 300);
+        $("#services-grey").attr("src", "images/services_grey_small.jpg");
+		$("#services-color").attr("src", "images/services_color_small.jpg");
+		$("#blog-image").animate({width: x/30}, 300);
+        $("#blog-grey").attr("src", "images/blog_grey_small.jpg");
+		$("#blog-color").attr("src", "images/blog_color_small.jpg");
+		$("#contact-image").animate({width: x/30}, 300);
+        $("#contact-grey").attr("src", "images/contact_grey_small.jpg");
+		$("#contact-color").attr("src", "images/contact_color_small.jpg");
+		
+        $("#header-line").attr("src", "images/header_with_x.png");
     } else {
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
-        document.querySelector('.services-image img').src = "images/services_grey.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+        $("#customers").animate({width: x/6}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+        $("#customers-image").animate({top: '20px'}, 300, function(){
+			$("#customers-image").animate({top: '0px'}, 300);
+        });
+		$("#customers-content").animate({width: "0px"}, 300);
+        $("#customers-grey").attr("src", "images/customers_grey.jpg");
+		$(".outer-div").animate({width: x/6}, 300);
+		
+		$("#aboutus-image").animate({width: x/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+		$("#news-image").animate({width: x/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_grey.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+		$("#services-image").animate({width: x/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_grey.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+		$("#blog-image").animate({width: x/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_grey.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+		$("#contact-image").animate({width: x/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_grey.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
     }
 });
 
 
+/*************************************/
+/***** Blog menu click functions *****/
 
-// On click Blog
-
-document.querySelector('.blog-image').addEventListener('click', function() {
-        
-    if (document.querySelector('#grid-wrapper').style.gridTemplateColumns !== "1fr 0px 1fr 0px 1fr 0px 1fr 0px 5fr 20fr 1fr 0px") {
-        
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 5fr 20fr 1fr 0px";
-        document.querySelector('.blog-image img').src = "images/blog_color.jpg";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_small.jpg";
-        document.querySelector('.news-image img').src = "images/news_small.jpg";
-        document.querySelector('.services-image img').src = "images/services_small.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_small.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_small.jpg";
+$("#blog-image").click(function() {
+    if ($("#blog-content").css("display") === "none") {        
+        $("#blog").animate({width: x*5/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_color.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+        $("#blog-image").animate({top: '20px'}, 300, function(){
+			$("#blog-image").animate({top: '0px'}, 300);
+        });
+        $("#blog-content").css("display", "flex");
+        $("#blog-content").animate({width: x*4/6}, 300);
+		$("#blog-image").css("width", x/6);
+		$(".outer-div").css("width", "auto");		
+		
+		$("#aboutus-content").animate({width: "0px"}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+		$("#news-content").animate({width: "0px"}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+		$("#services-content").animate({width: "0px"}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+		$("#customers-content").animate({width: "0px"}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+		$("#contact-content").animate({width: "0px"}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+		
+		$("#aboutus-image").animate({width: x/30}, 300);
+        $("#aboutus-grey").attr("src", "images/aboutus_grey_small.jpg");
+		$("#aboutus-color").attr("src", "images/aboutus_color_small.jpg");
+		$("#news-image").animate({width: x/30}, 300);
+        $("#news-grey").attr("src", "images/news_grey_small.jpg");
+		$("#news-color").attr("src", "images/news_color_small.jpg");
+		$("#services-image").animate({width: x/30}, 300);
+        $("#services-grey").attr("src", "images/services_grey_small.jpg");
+		$("#services-color").attr("src", "images/services_color_small.jpg");
+		$("#customers-image").animate({width: x/30}, 300);
+        $("#customers-grey").attr("src", "images/customers_grey_small.jpg");
+		$("#customers-color").attr("src", "images/customers_color_small.jpg");
+		$("#contact-image").animate({width: x/30}, 300);
+        $("#contact-grey").attr("src", "images/contact_grey_small.jpg");
+		$("#contact-color").attr("src", "images/contact_color_small.jpg");
+		
+        $("#header-line").attr("src", "images/header_with_x.png");
     } else {
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
-        document.querySelector('.services-image img').src = "images/services_grey.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+        $("#blog").animate({width: x/6}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+        $("#blog-image").animate({top: '20px'}, 300, function(){
+			$("#blog-image").animate({top: '0px'}, 300);
+        });
+		$("#blog-content").animate({width: "0px"}, 300);
+        $("#blog-grey").attr("src", "images/blog_grey.jpg");
+		$(".outer-div").animate({width: x/6}, 300);
+		
+		$("#aboutus-image").animate({width: x/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+		$("#news-image").animate({width: x/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_grey.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+		$("#services-image").animate({width: x/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_grey.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+		$("#customers-image").animate({width: x/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_grey.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+		$("#contact-image").animate({width: x/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_grey.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
     }
 });
 
 
+/*****************************************/
+/***** Contact menu click functions *****/
 
-// On click Contact
-
-document.querySelector('.contact-image').addEventListener('click', function() {
-        
-    if (document.querySelector('#grid-wrapper').style.gridTemplateColumns !== "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 5fr 20fr") {
-        
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 5fr 20fr";
-        document.querySelector('.contact-image img').src = "images/contact_color.jpg";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_small.jpg";
-        document.querySelector('.news-image img').src = "images/news_small.jpg";
-        document.querySelector('.services-image img').src = "images/services_small.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_small.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_small.jpg";
+$("#contact-image").click(function() {
+    if ($("#contact-content").css("display") === "none") {        
+        $("#contact").animate({width: x*5/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_color.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#contact-image").animate({top: '20px'}, 300, function(){
+			$("#contact-image").animate({top: '0px'}, 300);
+        });
+        $("#contact-content").css("display", "flex");
+        $("#contact-content").animate({width: x*4/6}, 300);
+		$("#contact-image").css("width", x/6);
+		$(".outer-div").css("width", "auto");		
+		
+		$("#aboutus-content").animate({width: "0px"}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+		$("#news-content").animate({width: "0px"}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+		$("#services-content").animate({width: "0px"}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+		$("#customers-content").animate({width: "0px"}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+		$("#blog-content").animate({width: "0px"}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+		
+		$("#aboutus-image").animate({width: x/30}, 300);
+        $("#aboutus-grey").attr("src", "images/aboutus_grey_small.jpg");
+		$("#aboutus-color").attr("src", "images/aboutus_color_small.jpg");
+		$("#news-image").animate({width: x/30}, 300);
+        $("#news-grey").attr("src", "images/news_grey_small.jpg");
+		$("#news-color").attr("src", "images/news_color_small.jpg");
+		$("#services-image").animate({width: x/30}, 300);
+        $("#services-grey").attr("src", "images/services_grey_small.jpg");
+		$("#services-color").attr("src", "images/services_color_small.jpg");
+		$("#customers-image").animate({width: x/30}, 300);
+        $("#customers-grey").attr("src", "images/customers_grey_small.jpg");
+		$("#customers-color").attr("src", "images/customers_color_small.jpg");
+		$("#blog-image").animate({width: x/30}, 300);
+        $("#blog-grey").attr("src", "images/blog_grey_small.jpg");
+		$("#blog-color").attr("src", "images/blog_color_small.jpg");
+		
+        $("#header-line").attr("src", "images/header_with_x.png");
     } else {
-        document.querySelector('#grid-wrapper').style.gridTemplateColumns = "1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px";
-        document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-        document.querySelector('.news-image img').src = "images/news_grey.jpg";
-        document.querySelector('.services-image img').src = "images/services_grey.jpg";
-        document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-        document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-        document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
+        $("#contact").animate({width: x/6}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+        $("#contact-image").animate({top: '20px'}, 300, function(){
+			$("#contact-image").animate({top: '0px'}, 300);
+        });
+		$(".outer-div").animate({width: x/6}, 300);
+		$("#contact-content").animate({width: "0px"}, 300);
+        $("#contact-grey").attr("src", "images/contact_grey.jpg");
+		
+		$("#aboutus-image").animate({width: x/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+		$("#news-image").animate({width: x/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_grey.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+		$("#services-image").animate({width: x/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_grey.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+		$("#customers-image").animate({width: x/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_grey.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+		$("#blog-image").animate({width: x/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_grey.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
     }
 });
 
 
+/************************************/
+/***** Header X click functions *****/
 
-/*
-document.querySelector('.aboutus-image img').addEventListener('mouseover', function() {
-    document.querySelector('.aboutus-image img').src = "images/aboutus_color.jpg";
+$('#hidden-x').click(function() {
+	if ($("#header-line").attr("src") === "images/header_with_x.png") {	
+
+		$("#aboutus-content").animate({width: "0px"}, 300, function(){
+			$("#aboutus-content").css("display", "none");
+		});
+		$("#news-content").animate({width: "0px"}, 300, function(){
+			$("#news-content").css("display", "none");
+		});
+		$("#services-content").animate({width: "0px"}, 300, function(){
+			$("#services-content").css("display", "none");
+		});
+		$("#customers-content").animate({width: "0px"}, 300, function(){
+			$("#customers-content").css("display", "none");
+		});
+		$("#blog-content").animate({width: "0px"}, 300, function(){
+			$("#blog-content").css("display", "none");
+		});
+		$("#contact-content").animate({width: "0px"}, 300, function(){
+			$("#contact-content").css("display", "none");
+		});
+		
+		$(".outer-div").animate({width: x/6}, 300);
+		
+        $("#aboutus-image").animate({width: x/6}, 300, function(){
+			$("#aboutus-grey").attr("src", "images/aboutus_grey.jpg");
+			$("#aboutus-color").attr("src", "images/aboutus_color.jpg");
+		});
+		$("#news-image").animate({width: x/6}, 300, function(){
+			$("#news-grey").attr("src", "images/news_grey.jpg");
+			$("#news-color").attr("src", "images/news_color.jpg");
+		});
+		$("#services-image").animate({width: x/6}, 300, function(){
+			$("#services-grey").attr("src", "images/services_grey.jpg");
+			$("#services-color").attr("src", "images/services_color.jpg");
+		});
+		$("#customers-image").animate({width: x/6}, 300, function(){
+			$("#customers-grey").attr("src", "images/customers_grey.jpg");
+			$("#customers-color").attr("src", "images/customers_color.jpg");
+		});
+		$("#blog-image").animate({width: x/6}, 300, function(){
+			$("#blog-grey").attr("src", "images/blog_grey.jpg");
+			$("#blog-color").attr("src", "images/blog_color.jpg");
+		});
+		$("#contact-image").animate({width: x/6}, 300, function(){
+			$("#contact-grey").attr("src", "images/contact_grey.jpg");
+			$("#contact-color").attr("src", "images/contact_color.jpg");
+		});
+        $("#header-line").attr("src", "images/header_with_logo.png");
+    } else {		
+    }
 });
-document.querySelector('.aboutus-image').addEventListener('mouseout', function() {
-    document.querySelector('.aboutus-image img').src = "images/aboutus_grey.jpg";
-});
-
-document.querySelector('.news-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.news-image img').src = "images/news_color.jpg";
-});
-document.querySelector('.news-image').addEventListener('mouseout', function() {
-    document.querySelector('.news-image img').src = "images/news_grey.jpg";
-});
-
-document.querySelector('.services-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.services-image img').src = "images/services_color.jpg";
-});
-document.querySelector('.services-image').addEventListener('mouseout', function() {
-    document.querySelector('.services-image img').src = "images/services_grey.jpg";
-});
-
-document.querySelector('.customers-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.customers-image img').src = "images/customers_color.jpg";
-});
-document.querySelector('.customers-image').addEventListener('mouseout', function() {
-    document.querySelector('.customers-image img').src = "images/customers_grey.jpg";
-});
-
-document.querySelector('.blog-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.blog-image img').src = "images/blog_color.jpg";
-});
-document.querySelector('.blog-image').addEventListener('mouseout', function() {
-    document.querySelector('.blog-image img').src = "images/blog_grey.jpg";
-});
-
-document.querySelector('.contact-image img').addEventListener('mouseenter', function() {
-    document.querySelector('.contact-image img').src = "images/contact_color.jpg";
-});
-document.querySelector('.contact-image').addEventListener('mouseout', function() {
-    document.querySelector('.contact-image img').src = "images/contact_grey.jpg";
-});
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
