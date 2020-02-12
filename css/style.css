@@ -327,8 +327,8 @@ a .news-container-button:hover {
 }
 
 .blog-container-image img {
-	width: 200px;
-	height: 200px;
+	max-width: 200px;
+	max-height: 200px;
 }
 
 .blog-container-button {
