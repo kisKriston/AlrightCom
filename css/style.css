@@ -197,7 +197,7 @@ main {
 	bottom: -10%;
 	right: -2%;
 	background-color: #3c3c3c;
-	padding: 0 50px;
+	padding: 0 30px;
 	border-radius: 5px;
 	box-shadow: -5px -5px 0 5px #2f2f2f;
 	transition: all .5s linear;
@@ -205,12 +205,13 @@ main {
 
 .news-container-button h4 {
 	font-weight: 500;
+	margin: 10px;
 }
 
 a .news-container-button:hover {
 	background-color: #1b1b1b;
 	transform: scale(1.05);
-	box-shadow: -3px -2.5px 0 2.5px #2f2f2f;
+	box-shadow: -3px -3px 0 3px #2f2f2f;
 }
 
 
@@ -335,7 +336,7 @@ a .news-container-button:hover {
 	bottom: -10%;
 	right: -2%;
 	background-color: #3c3c3c;
-	padding: 0 50px;
+	padding: 0 30px;
 	border-radius: 5px;
 	box-shadow: -5px -5px 0 5px #2f2f2f;
 	transition: all .5s linear;
@@ -343,11 +344,12 @@ a .news-container-button:hover {
 
 .blog-container-button h4 {
 	font-weight: 500;
+	margin: 10px;
 }
 
 a .blog-container-button:hover {
 	background-color: #1b1b1b;
 	transform: scale(1.05);
-	box-shadow: -3px -2.5px 0 2.5px #2f2f2f;
+	box-shadow: -3px -3px 0 3px #2f2f2f;
 }
 
