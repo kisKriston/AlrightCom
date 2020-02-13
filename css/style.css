@@ -78,6 +78,7 @@ main {
 	justify-content: center;
 	margin: 0 auto;
     max-width: 1920px;
+    max-height: 1080px;
 }
 
 .outer-div {
@@ -320,10 +321,12 @@ a .news-container-button:hover {
 	margin-right: 100px;
 	border-bottom: 2px solid #fff;
 	font-weight: bold;
+    font-size: 20px;
 }
 
 .blog-container-text p {
 	font-style: italic;
+    font-size: 16px;
 }
 
 .blog-container-image img {
@@ -358,7 +361,7 @@ a .blog-container-button:hover {
 
 
 /*******************************/
-/***** Blog section styles *****/
+/***** Contact section styles *****/
 
 #contact-inner {
 	display: flex;
@@ -382,11 +385,8 @@ a .blog-container-button:hover {
 }
 
 .contact-left-image {
-	max-width: 40%;	
-	background-color: #eee;
+	max-width: 40%;
 	padding: 40px 20px;
-	border: 2px solid #eee;
-	border-radius: 100%;
 	margin-bottom: 30px;
 }
 
