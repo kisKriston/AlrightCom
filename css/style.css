@@ -360,7 +360,7 @@ a .blog-container-button:hover {
 
 
 /*******************************/
-/***** Blog section styles *****/
+/***** Contact section styles *****/
 
 #contact-inner {
 	display: flex;
@@ -384,11 +384,8 @@ a .blog-container-button:hover {
 }
 
 .contact-left-image {
-	max-width: 40%;	
-	background-color: #eee;
+	max-width: 40%;
 	padding: 40px 20px;
-	border: 2px solid #eee;
-	border-radius: 100%;
 	margin-bottom: 30px;
 }
 
