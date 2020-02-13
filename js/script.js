@@ -72,15 +72,15 @@ $("#contact").mouseleave(function() {
 /***** Basic declarations *****/
 
 
-$(document).ready(function(){
-    $("main").css("width", "100%");
+
+
     var x = $("main").width();
     var y = $(window).height();
     var z = $("main").height();
 
     $("div.images img").css("maxHeight", y);
     $("div.images img").css("height", z);
-};
+
 
 /*****************************************/
 /***** About us menu click functions *****/
