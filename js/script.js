@@ -71,7 +71,7 @@ $("#contact").mouseleave(function() {
 /******************************/
 /***** Basic declarations *****/
 
-var x = $("main").width();
+var x = $("body").width();
 var y = $(window).height();
 var z = $("main").height();
 
