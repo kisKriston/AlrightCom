@@ -78,6 +78,7 @@ main {
 	justify-content: center;
 	margin: 0 auto;
     max-width: 1920px;
+	max-height: 1080px;
 }
 
 .outer-div {
